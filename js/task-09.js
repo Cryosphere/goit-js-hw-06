@@ -8,8 +8,7 @@ const changeColor = () => {
    document.querySelector('.color').innerHTML = color;
 }
   
-const btnChageColor = document.querySelector('.change-color');
-btnChageColor.addEventListener('click', changeColor);
+document.querySelector('.change-color').addEventListener('click', changeColor);
 
 
 
