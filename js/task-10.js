@@ -7,18 +7,19 @@ function createBoxes(amount) { let startSize = 30; for (let i = 0; i < amount; i
 function destroyBoxes() { let boxes = document.getElementById("boxes"); while (boxes.firstChild) { boxes.removeChild(boxes.firstChild); } }
 
 
+
 const control = document.querySelector('#controls').firstElementChild;
 const createBtn = document.querySelector('#controls > *:nth-child(2)');
 const destroyBtn = document.querySelector('#controls > *:nth-child(3)');
-const amountCtrl = document.getElementsByTagName("input")[1].value;
+let valueCtrl = control.value;
 
-control.addEventListener('change', () => { console.log(amountCtrl) });
+control.addEventListener('change', () => { valueCtrl = control.value;});
 createBtn.addEventListener('click', () => {
-  createBoxes(amountCtrl);
-  console.log(amountCtrl);
+    createBoxes (valueCtrl);
 });
 
-// createBtn.addEventListener('click', createBoxes);
-
+destroyBtn.addEventListener('click', () => {
+    destroyBoxes ();
+});
 
 
