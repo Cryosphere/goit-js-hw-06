@@ -1,6 +1,11 @@
 
-const inputReplication = () => {
-    document.querySelector('#name-output').innerHTML = document.querySelector("#name-input").value;
-};
+const textInput = document.querySelector('#name-input')
+const output = document.querySelector('#name-output')
 
-document.querySelector("#name-input").addEventListener("input",inputReplication);
+textInput.addEventListener('input', event => {
+	output.textContent = event.target.value
+
+	if (event.target.value === '') {
+		output.textContent = 'Anonymous'
+	}
+})

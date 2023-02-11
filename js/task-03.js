@@ -18,7 +18,12 @@ const galleryElement = document.querySelector(".gallery");
 let markup = '';
 
 for (let image of images) {
-  markup += `<li class="gallery__item"><img src="${image.url}" alt="${image.alt}" class="gallery__image" /></li>`;
+  markup += `<li class="gallery__item"><img src="${image.url}" width = '400' alt="${image.alt}" class="gallery__image" /></li>`;
 }
 
 galleryElement.insertAdjacentHTML('afterbegin', markup);
+galleryElement.style.display = 'flex';
+galleryElement.style.flexWrap = 'column-reverse'
+galleryElement.style.listStyle = 'none'
+galleryElement.style.gap = '20px'
+galleryElement.style.justifyContent = 'center'
