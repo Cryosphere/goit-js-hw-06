@@ -18,7 +18,7 @@ function destroyBoxes() {
   let boxes = document.getElementById("boxes");
   while (boxes.firstChild) {
     boxes.removeChild(boxes.firstChild);
-    startSize = 0;
+    startSize = 30;
   }
 }
 
